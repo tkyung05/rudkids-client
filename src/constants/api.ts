@@ -22,6 +22,17 @@ const RESPONSE = {
   },
 };
 
+const QUERY_CLIENT_CONFIG = {
+  defaultOptions: {
+    queries: {
+      retry: 0,
+    },
+    mutations: {
+      retry: 0,
+    },
+  },
+};
+
 const CACHE_KEY = {
   PRODUCT_LIST: 'productList',
   PRODUCT_DETAIL: 'productDetail',
@@ -42,4 +53,4 @@ const CACHE_KEY = {
   MYSTERY: 'mystery',
 };
 
-export { RESPONSE, API, CACHE_KEY, STATUS_TYPE };
+export { RESPONSE, API, CACHE_KEY, STATUS_TYPE, QUERY_CLIENT_CONFIG };

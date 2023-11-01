@@ -25,6 +25,7 @@ export const DetailOrderButton = styled.div`
   color: ${PALETTE.WHITE};
 
   transition: color 0.15s linear;
+
   &:hover {
     color: ${PALETTE.GRAY_2};
   }

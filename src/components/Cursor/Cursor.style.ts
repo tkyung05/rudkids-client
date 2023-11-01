@@ -6,5 +6,6 @@ export const Cursor = styled(Image)`
   position: fixed;
 
   width: 80px;
+  height: auto;
   z-index: 1000;
 `;

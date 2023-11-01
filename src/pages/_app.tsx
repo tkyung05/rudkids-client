@@ -10,6 +10,7 @@ import { GlobalStyle } from '@/styles/\bGlobalStyle';
 import Cursor from '@/components/Cursor';
 
 import { CURSOR_STATUS } from '@/constants';
+import { QUERY_CLIENT_CONFIG } from '@/constants/api';
 import { RESPONSIVE } from '@/constants/style';
 
 import SEO from '../../seo.config';
@@ -19,19 +20,8 @@ export default function App({ Component, pageProps }: AppProps) {
   const [selectedCursor, setSelectedCursor] = useState(CURSOR_STATUS.DEFAULT);
   const [cursorPosition, setCursorPosition] = useState<number[]>([-1000, -1000]);
   const [isDisableCustomCursor, setIsDisableCustomCursor] = useState<boolean>(false);
-  const [queryClient] = useState(
-    () =>
-      new QueryClient({
-        defaultOptions: {
-          queries: {
-            retry: 0,
-          },
-          mutations: {
-            retry: 0,
-          },
-        },
-      })
-  );
+
+  const [queryClient] = useState(() => new QueryClient(QUERY_CLIENT_CONFIG));
 
   useEffect(() => {
     window.innerWidth <= parseInt(RESPONSIVE.MOBILE.MAX_WIDTH) && setIsDisableCustomCursor(true);
@@ -39,23 +29,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     const cursorEvent = ({ clientX, clientY }: MouseEvent) => {
-      const position = [clientX, clientY];
-
-      switch (selectedCursor) {
-        case CURSOR_STATUS.DEFAULT:
-          position[0] -= 10;
-          position[1] -= 35;
-          break;
-        case CURSOR_STATUS.FUCK_YOU:
-          position[0] -= 10;
-          position[1] -= 250;
-          break;
-        case CURSOR_STATUS.THUMBS_UP:
-          position[0] -= 10;
-          position[1] -= 55;
-          break;
-      }
-      setCursorPosition(position);
+      setCursorPosition([clientX, clientY]);
     };
 
     window.addEventListener('mousemove', cursorEvent);

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 
-import { FONT, PALETTE } from '@/constants/style';
+import { PALETTE } from '@/constants/style';
 
 import { HEADER_HEIGHT } from '../Header/Header.style';
 

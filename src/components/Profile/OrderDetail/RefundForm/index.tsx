@@ -36,7 +36,7 @@ function RefundForm(props: RefundFormPropsType) {
             {...register('cancelReason', {
               required: { value: true, message: '취소 사유를 입력해주세요!' },
             })}
-            placeholder="ex) 나는 멋없다."
+            placeholder="ex) 이거 재미없어서 환불 하겠습니다."
           />
         </S.RefundInputBundle>
 

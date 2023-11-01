@@ -57,7 +57,9 @@ function PhoneNumber() {
   const handleClickSendPhoneNumberButton = (evet: any) => {
     evet.preventDefault();
 
-    if (phoneNumber.length < 11) return onToast('error', '전화번호 11자 모두 입력해주세요!');
+    if (phoneNumber.length < 11) {
+      return onToast('error', '전화번호 11자 모두 입력해주세요!');
+    }
 
     sendPhoneNumber(phoneNumber);
   };

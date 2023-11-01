@@ -6,6 +6,7 @@ module.exports = {
       'rudkids-image.s3.ap-northeast-2.amazonaws.com',
       'lh3.googleusercontent.com',
     ],
+    formats: ['image/avif', 'image/webp'],
   },
   reactStrictMode: false,
   swcMinify: true,

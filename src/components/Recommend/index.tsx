@@ -13,8 +13,10 @@ function RecommendItemList() {
   const { data: recommendItemListData, status, fetchNextPage } = useGetRecommendItemList();
 
   const scrollPoint = useRef(null);
-  const onIntersect = ([entry]: any) => entry.isIntersecting && fetchNextPage();
-  useObserver(scrollPoint, onIntersect);
+  useObserver(
+    scrollPoint,
+    ([entry]: IntersectionObserverEntry[]) => entry.isIntersecting && fetchNextPage()
+  );
 
   return (
     <>

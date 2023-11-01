@@ -1,5 +1,5 @@
-import MAIN_DESK from '@/assets/png/main_desk.jpeg';
-import MAIN_MOBILE from '@/assets/png/main_mobile.jpeg';
+import MAIN_DESK from '@/assets/png/main_desk.webp';
+import MAIN_MOBILE from '@/assets/png/main_mobile.webp';
 import { useEffect, useState } from 'react';
 
 import useGetWindowSize from '@/hooks/useGetWindowSize';
@@ -11,7 +11,7 @@ import * as S from './Main.style';
 
 function Main() {
   const { curWidth } = useGetWindowSize();
-  const [mainImage, setMainImage] = useState('');
+  const [mainImage, setMainImage] = useState(MAIN_DESK.src);
 
   useEffect(() => {
     setMainImage(
@@ -21,7 +21,7 @@ function Main() {
 
   return (
     <S.Container>
-      <S.ImageContent src={mainImage} width={10000} height={10000} alt="루키즈 대표 사진" />
+      <S.ImageContent priority width={1000} height={1000} src={mainImage} alt="루키즈 사진" />
 
       <S.ProductContainer>
         <ProductList />

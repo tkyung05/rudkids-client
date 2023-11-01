@@ -1,4 +1,3 @@
-/* eslint-disable react/destructuring-assignment */
 import { ChangeEvent, MutableRefObject } from 'react';
 
 interface ImageInputPropsType {

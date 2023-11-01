@@ -8,7 +8,7 @@ interface CursorPropsType {
 }
 
 function Cursor({ src, style }: CursorPropsType) {
-  return <S.Cursor src={src} alt="커스텀 커서" style={style} />;
+  return <S.Cursor priority src={src} width={80} height={80} alt="커스텀 커서" style={style} />;
 }
 
 export default Cursor;

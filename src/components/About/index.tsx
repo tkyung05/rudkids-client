@@ -10,7 +10,6 @@ import useDeleteElement from '@/hooks/useDeleteElement';
 
 import { PATH } from '@/constants';
 
-import VideoPlayer from '../@common/VideoPlayer';
 import * as S from './About.style';
 import MessageBox, { MessageBoxPropsType } from './MessageBox';
 
@@ -345,14 +344,6 @@ function About() {
 
   return (
     <>
-      {/* <VideoPlayer
-                url={'https://youtu.be/9fmp2T97SnE'}
-                autoPlay={true}
-                muted={true}
-                handleOffVideo={() => {}}
-                style={{ display: 'none' }}
-              /> */}
-
       <S.Container>
         {isStart && (
           <S.HomeIcon

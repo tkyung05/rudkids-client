@@ -45,6 +45,7 @@ function Header() {
 
         <S.LogoContainer>
           <S.Logo
+            priority
             alt="루키즈 로고"
             src={RUDKIDS_LOGO}
             onClick={() => handleClickNavButton(PATH.MAIN)}
@@ -94,6 +95,7 @@ function Header() {
 
         <S.LogoContainer>
           <S.Logo
+            priority
             alt="루키즈 로고"
             src={RUDKIDS_LOGO}
             onClick={() => handleClickNavButton(PATH.MAIN)}

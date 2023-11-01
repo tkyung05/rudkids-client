@@ -1,6 +1,5 @@
-import DEFAULT_CURSOR_URL from '@/assets/svg/cursor_default.svg';
-import FUCK_YOU_CURSOR_URL from '@/assets/svg/cursor_fuck_you.svg';
-import THUMBS_UP_CURSOR_URL from '@/assets/svg/cursor_thumbs_up.svg';
+import DEFAULT_CURSOR_URL from '@/assets/png/cursor_default.webp';
+import THUMBS_UP_CURSOR_URL from '@/assets/png/cursor_thumbs_up.webp';
 
 const PAYMENT_KEY = {
   CLIENT: process.env.NEXT_PUBLIC_PAYMENT_CLIENT_KEY,
@@ -18,7 +17,6 @@ const IMAGE_KEY = {
 
 const CURSOR_STATUS = {
   DEFAULT: DEFAULT_CURSOR_URL,
-  FUCK_YOU: FUCK_YOU_CURSOR_URL,
   THUMBS_UP: THUMBS_UP_CURSOR_URL,
 };
 

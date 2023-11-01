@@ -11,9 +11,9 @@ import { PALETTE } from '@/constants/style';
 import * as S from './CanceledOrderList.style';
 
 function CanceledOrderList() {
-  const { push } = useRouter();
-
   const { data: canceledOrderList, status } = useGetCanceledOrderList();
+
+  const { push } = useRouter();
 
   const handleClickDetailOrderButton = (orderId: string) => {
     push(PATH.ORDER_DETAIL + `?orderId=${orderId}`);
